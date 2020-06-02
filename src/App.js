@@ -5,22 +5,12 @@ import Button from './Components/Button';
 import Card from './Components/Card';
 import styled from 'styled-components';
 
-const StyledTable = styled.table`
-    text-align: left;
-    margin-top: 40px;
-  `;
-
-    const StyledTh = styled.th`
-      padding: 10px 30px;  
-  `;
-
 const ButtonDiv = styled.div`
   width: 100%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   `;
-
 
 const generateRandomActors = (amount) =>{
   let result = [];
@@ -72,18 +62,18 @@ class App extends Component{
       <div className="App">
         <header className="App-header">
           
-          <ButtonDiv className = "buttonHolder">
+          <ButtonDiv>
           <Button inTable = {false} clickHandler = {this.newActor} text = 'Generate random actor'/>
           <Button inTable = {false} clickHandler = {this.sortByName} text = 'Sort by name'/>
           <Button inTable = {false} clickHandler = {this.sortByPopularity} text = 'Sort by popularity'/>
           </ButtonDiv>
-          <StyledTable>
+          <table>
             <thead>
               <tr>
-                <StyledTh>Picture</StyledTh>
-                <StyledTh>Name</StyledTh>
-                <StyledTh>Popularity</StyledTh>
-                <StyledTh>Action</StyledTh>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Popularity</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -94,7 +84,7 @@ class App extends Component{
                 action = {this.deleteActor}
             />)}
             </tbody>
-          </StyledTable>
+          </table>
         </header>
       </div>
     );

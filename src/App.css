@@ -22,4 +22,11 @@ img{
   max-width: 115px;
 }
 
+table {
+    text-align: left;
+    margin-top: 40px;
+}
 
+td, th{
+  padding: 10px 30px;
+}
